@@ -12,14 +12,6 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
-hbs.registerHelper('getCurrentYear', () => {
-    return new Date().getFullYear();
-});
-
-hbs.registerHelper('message', (text) => {
-    return text.toUpperCase()
-});
-
 
 app.get('/', (request, response) => {
     response.render('main.hbs', {
@@ -39,11 +31,7 @@ app.get('/', (request, response) => {
 //     next()
 // });
 
-app.get('/info',(request, response) => {
-    response.render('about.hbs', {
-        title: 'Main Page'
-    })
-});
+
 
 app.get('/404', (request, response) => {
     response.send({error: 'Page not found'})
