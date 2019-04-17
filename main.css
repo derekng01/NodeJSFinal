@@ -27,3 +27,9 @@ nav ul li a {
     color: black;
     font-size: 35px;
 }
+
+body {
+    background-color: lightblue;
+}p {
+     background-color: white;
+ }
