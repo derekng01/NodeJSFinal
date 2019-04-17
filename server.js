@@ -118,6 +118,35 @@ var getAPI1 = async (cards) => {
 };
 
 
+
+app.post('/displaynasa', async (request, response) => {
+    try {
+        var images_to_search = request.body.image_to_search;
+        var deck = await axios.get('https://images-api.nasa.gov/search?q=' + encodeURIComponent(images_to_search));
+        var images = '';
+        for(var i = 0; i < 4; i++) {
+            var item = deck.data.collection.items[i].links[0].href;
+            item = encodeURI(item);
+            images = images + '<img height="250" width="250" alt="nasa" src=' + item + '>'
+        }
+        response.render('second.hbs', {
+            title: 'NASA API',
+            header: 'NASA API',
+            images: images
+        });
+
+    } catch (e) {
+
+    }
+});
+
+
+
+
+
+
+
+
 app.get('/', (request, response) => {
     response.render('main.hbs', {
         title: "Home Page",
