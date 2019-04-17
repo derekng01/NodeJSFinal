@@ -20,19 +20,19 @@ app.use(bodyParser.urlencoded({
 hbs.registerPartials(__dirname);
 
 app.set('view engine', 'hbs');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname ));
 
 
 app.post('/input', async (request, response) => {
     var image = request.body.user;
     JSON.stringify(image);
-    var money = await getCurrency(image, "USD");
+    var money = await getAPI1(image, "USD");
     response.render('main.hbs', {
         output: money
     })
 });
 
-var getCurrency = async (country, base) => {
+var getAPI1 = async (country, base) => {
     try{
         var url = await axios.get(`https://restcountries.eu/rest/v2/name/${country}`);
         var country_code = url.data[0].currencies[0].code;
