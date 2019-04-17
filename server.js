@@ -157,7 +157,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/2', (request, response) => {
-    response.render('gallery.hbs', {
+    response.render('second.hbs', {
         title: "Home Page",
         header: "Welcome to Home!"
     });
