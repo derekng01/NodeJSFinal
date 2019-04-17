@@ -10,12 +10,10 @@
 {{> nav}}
 
 <main>
-    asd
     <section>
         <!--REPLACE /LOGIN-->
         <form method="POST" action="/input">
-            <input type="text" name="user" placeholder="What you want to search">
-            <input type="submit">
+            <input type="text" name="user" placeholder="What you want to search" required>          <input type="submit">
         </form>
         <p>{{output}}</p>
 
