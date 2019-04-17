@@ -86,6 +86,19 @@ app.post('/input', async (request, response) => {
 });
 
 
+app.post('/input2', async (request, response) => {
+    var search = request.body.user;
+    JSON.stringify(search);
+
+    var search = await getAPI2(search);
+
+    response.render('second.hbs', {
+        output1: search
+
+    })
+});
+
+
 var getAPI1 = async (cards) => {
     try{
         var url = await axios.get(`https://deckofcardsapi.com/api/deck/new/draw/?count=${cards}`);
@@ -111,22 +124,31 @@ var getAPI1 = async (cards) => {
 
 
 
-// var getAPI1 = async (country, base) => {
-//     try{
-//         var url = await axios.get(`https://restcountries.eu/rest/v2/name/${country}`);
-//         var country_code = url.data[0].currencies[0].code;
-//         var currency = await axios.get(`https://api.exchangeratesapi.io/latest?symbols=${country_code}&base=${base}`);
-//         var json_string = JSON.stringify(currency.data.rates[`${country_code}`]);
-//         return `1 ${base} is equal to ${json_string} ${country_code}`;
-//     }catch(err) {
-//         if (`${err}` === "Error: Request failed with status code 404") {
-//             return "The country name entered is incorrect"
-//         }
-//         if (`${err}` === "Error: Request failed with status code 400") {
-//             return "The base currency entered is incorrect"
-//         }
-//     }
-// };
+route.post('/get_image', async(request, response)=> {
+    try{
+        var entry = request.body.image_entry;
+        var imageapi = await geocode.getImage(entry);
+        // console.log(imageapi);
+        var images = [];
+
+        for (var i=0; i<imageapi.length; i++){
+            images.push({path: imageapi[i].links[0].href});
+        }
+        response.render('index', {
+            jumbo_main: "Welcome",
+            jumbo_sec: "Image Parser",
+            url: images
+        })
+    }catch(err){
+        if (err){
+            response.render('index', {
+                jumbo_main: "Welcome",
+                jumbo_sec: err
+            })
+        }
+    }
+});
+
 
 
 
