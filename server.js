@@ -20,19 +20,6 @@ app.get('/', (request, response) => {
     });
 });
 
-// app.use((request, response, next) => {
-//     var time = new Date().toString();
-//     var log = `${time}:${request.method} ${request.url}`;
-//     fs.appendFile('server.log', log + '\n', (error) => {
-//         if (error) {
-//             console.log('Unable to log message');
-//         }
-//     });
-//     next()
-// });
-
-
-
 app.get('/404', (request, response) => {
     response.send({error: 'Page not found'})
 });
