@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c16004b-9095-4aaf-8a52-abf9cedc2137" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nav.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/nav.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/second.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/second.hbs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +22,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa13720.44033/final_app2-master/app.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="63">
-                    <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="102" selection-end-column="3" />
+                  <state relative-caret-position="293">
+                    <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
                   </state>
                 </provider>
               </entry>
@@ -74,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+            <state relative-caret-position="253">
+              <caret line="159" column="28" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
               <folding>
                 <element signature="e#690#744#0" />
               </folding>
@@ -122,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nav.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="207">
+              <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -170,9 +167,9 @@
         <option value="$PROJECT_DIR$/views/second.js" />
         <option value="$PROJECT_DIR$/views/main.hbs" />
         <option value="$PROJECT_DIR$/views/second.hbs" />
+        <option value="$PROJECT_DIR$/utils.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/nav.hbs" />
-        <option value="$PROJECT_DIR$/utils.js" />
       </list>
     </option>
   </component>
@@ -266,12 +263,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555515319297</updated>
-      <workItem from="1555515320476" duration="13622000" />
+      <workItem from="1555515320476" duration="13728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13622000" />
+    <option name="totallyTimeSpent" value="13728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1057" extended-state="0" />
@@ -519,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nav.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -533,20 +523,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa13720.44033/final_app2-master/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-          <folding>
-            <element signature="e#690#744#0" />
-          </folding>
+        <state relative-caret-position="293">
+          <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa13720.44033/final_app2-master/app.js">
+    <entry file="file://$PROJECT_DIR$/nav.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="102" selection-end-column="3" />
+        <state relative-caret-position="207">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="159" column="28" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+          <folding>
+            <element signature="e#690#744#0" />
+          </folding>
         </state>
       </provider>
     </entry>
