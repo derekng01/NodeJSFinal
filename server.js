@@ -22,7 +22,7 @@ hbs.registerHelper('message', (text) => {
 
 
 app.get('/', (request, response) => {
-    response.render('index.hbs', {
+    response.render('main.hbs', {
         title: "Home Page",
         header: "Welcome to Home!"
     });
