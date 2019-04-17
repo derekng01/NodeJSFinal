@@ -25,6 +25,13 @@ app.get('/404', (request, response) => {
 });
 
 
+app.post('/input', (request, response)=> {
+    user_input = request.body
+    response.render('main.hbs', {
+        output: user_input
+    })
+});
+
 app.listen(port, () => {
     console.log('Server is up on the port 8080')
 });
