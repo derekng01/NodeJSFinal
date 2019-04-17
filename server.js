@@ -118,37 +118,6 @@ var getAPI1 = async (cards) => {
 };
 
 
-
-
-
-
-
-
-route.post('/get_image', async(request, response)=> {
-    try{
-        var entry = request.body.image_entry;
-        var imageapi = await geocode.getImage(entry);
-        // console.log(imageapi);
-        var images = [];
-
-        for (var i=0; i<imageapi.length; i++){
-            images.push({path: imageapi[i].links[0].href});
-        }
-        response.render('index', {
-            jumbo_main: "Welcome",
-            jumbo_sec: "Image Parser",
-            url: images
-        })
-    }catch(err){
-        if (err){
-            response.render('index', {
-                jumbo_main: "Welcome",
-                jumbo_sec: err
-            })
-        }
-    }
-});
-
 app.get('/', (request, response) => {
     response.render('main.hbs', {
         title: "Home Page",
