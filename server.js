@@ -1,5 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
+const axios = require('axios');
+
 var app = express();
 const fs = require('fs');
 
@@ -20,26 +22,22 @@ hbs.registerHelper('message', (text) => {
 
 
 app.get('/', (request, response) => {
-    response.send({
-        name: 'Raphael Pletz',
-        school: [
-            'BCIT',
-            'SFU',
-            'UBC'
-        ]
-    })
+    response.render('index.hbs', {
+        title: "Home Page",
+        header: "Welcome to Home!"
+    });
 });
 
-app.use((request, response, next) => {
-    var time = new Date().toString();
-    var log = `${time}:${request.method} ${request.url}`;
-    fs.appendFile('server.log', log + '\n', (error) => {
-        if (error) {
-            console.log('Unable to log message');
-        }
-    });
-    next()
-});
+// app.use((request, response, next) => {
+//     var time = new Date().toString();
+//     var log = `${time}:${request.method} ${request.url}`;
+//     fs.appendFile('server.log', log + '\n', (error) => {
+//         if (error) {
+//             console.log('Unable to log message');
+//         }
+//     });
+//     next()
+// });
 
 app.get('/info',(request, response) => {
     response.render('about.hbs', {
